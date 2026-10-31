@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f3">
+  <title>Our Little Love Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true" id="ambient"></div>
+  <main class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Our love story"><span>♡</span> our little love story</a>
+      <div class="step-indicator" id="stepIndicator">A little surprise for you</div>
+    </header>
+
+    <section class="page active" id="page1" aria-labelledby="welcomeTitle">
+      <div class="welcome-layout">
+        <div class="welcome-copy">
+          <p class="eyebrow">A little something, made with love</p>
+          <h1 id="welcomeTitle">For the girl who makes<br><em>my world bloom.</em></h1>
+          <p class="lead">I made a tiny journey just for you. Take your time, sweetheart — every little click comes with a whole lot of love.</p>
+          <button class="btn btn-primary" id="startBtn">Open My Surprise <span>♡</span></button>
+          <div class="tiny-note">made with all my heart, just for you</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun-glow"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-heart">♥</div><div class="flower flower-a">✿</div><div class="flower flower-b">❀</div>
+          <div class="flower flower-c">✿</div><span class="sparkle s1">✧</span><span class="sparkle s2">✦</span>
+          <span class="sparkle s3">✧</span><span class="sparkle s4">·</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page2" aria-labelledby="nameTitle">
+      <div class="form-card">
+        <div class="step-kicker">01 · just to make sure</div>
+        <div class="icon-medallion">♡</div>
+        <h2 id="nameTitle">Who is this love note for?</h2>
+        <p class="muted">A little check before I let you into our special surprise.</p>
+        <form id="nameForm" novalidate>
+          <label class="field-label" for="fullName">Your beautiful full name</label>
+          <input id="fullName" type="text" autocomplete="name" placeholder="Type your full name..." required>
+          <p class="form-message" id="nameMessage" aria-live="polite"></p>
+          <button class="btn btn-primary full" type="submit">That's me! <span>♡</span></button>
+        </form>
+        <button class="text-btn back-btn" data-back="1">← Go back</button>
+      </div>
+    </section>
+
+    <section class="page" id="page3" aria-labelledby="dateTitle">
+      <div class="form-card">
+        <div class="step-kicker">02 · our special day</div>
+        <div class="icon-medallion">✿</div>
+        <h2 id="dateTitle">When is our monthsary?</h2>
+        <p class="muted">Choose the date that holds a little piece of our story.</p>
+        <form id="dateForm" novalidate>
+          <label class="field-label" for="monthsaryDate">Our special date</label>
+          <input id="monthsaryDate" type="date" required>
+          <div class="date-preview" id="datePreview"><span>♡</span><div><small>OUR DAY</small><strong>Waiting for your date...</strong></div><span>♡</span></div>
+          <p class="form-message" id="dateMessage" aria-live="polite"></p>
+          <button class="btn btn-primary full" type="submit">Save our date <span>♡</span></button>
+        </form>
+        <button class="text-btn back-btn" data-back="2">← Go back</button>
+      </div>
+    </section>
+
+    <section class="page" id="page4" aria-labelledby="photoTitle">
+      <div class="form-card photo-card">
+        <div class="step-kicker">03 · a favorite memory</div>
+        <div class="icon-medallion">♡</div>
+        <h2 id="photoTitle">Add a picture of us</h2>
+        <p class="muted">Choose a photo you love. It will be part of the final surprise.</p>
+        <label class="upload-zone" for="photoUpload">
+          <input id="photoUpload" type="file" accept="image/*">
+          <span class="upload-icon">＋</span><strong>Choose our photo</strong><small>Tap to browse your device · JPG, PNG, WEBP</small>
+        </label>
+        <div class="photo-preview-wrap" id="photoPreviewWrap" hidden>
+          <div class="photo-frame"><img id="photoPreview" alt="Your selected couple photo"><span class="frame-heart">♥</span></div>
+          <p class="photo-caption">A memory worth keeping forever ♡</p>
+        </div>
+        <p class="form-message" id="photoMessage" aria-live="polite"></p>
+        <button class="btn btn-primary full" id="photoContinue">Keep this memory <span>♡</span></button>
+        <button class="text-btn back-btn" data-back="3">← Go back</button>
+      </div>
+    </section>
+
+    <section class="page letter-page" id="page5" aria-labelledby="letterTitle">
+      <div class="letter-intro">
+        <div class="step-kicker">04 · a letter from my heart</div>
+        <h2 id="letterTitle">A little note, just for you.</h2>
+        <p class="muted">Tap the envelope to open your letter.</p>
+      </div>
+      <button class="envelope-button" id="envelopeButton" aria-label="Open the love letter" aria-expanded="false">
+        <div class="envelope" id="envelope">
+          <div class="letter-paper">
+            <div class="letter-inner">
+              <div class="letter-top">To my favorite person,</div>
+              <p id="letterText"></p>
+              <div class="letter-sign">Forever yours, <span>♡</span></div>
+            </div>
+          </div>
+          <div class="envelope-back"></div><div class="envelope-front"></div>
+          <div class="envelope-flap"></div><div class="wax-seal">♥</div>
+        </div>
+      </button>
+      <p class="tap-hint" id="tapHint">♡ tap to unfold my heart ♡</p>
+      <button class="btn btn-primary" id="letterContinue" disabled>Read my surprise <span>♡</span></button>
+      <button class="text-btn back-btn" data-back="4">← Go back</button>
+    </section>
+
+    <section class="page final-page" id="page6" aria-labelledby="finalTitle">
+      <div class="final-confetti" aria-hidden="true">✧　♡　✿　♡　✧</div>
+      <p class="eyebrow">another month, another reason to love you</p>
+      <h1 id="finalTitle">HAPPY 31TH MONTHSARY,<br><em>MY BABY!</em></h1>
+      <p class="final-name" id="finalName"></p>
+      <div class="final-date" id="finalDate"></div>
+      <div class="final-photo-frame"><img id="finalPhoto" alt="Our special photo"><span>♡</span></div>
+      <p class="final-message" id="finalMessage"></p>
+      <button class="btn btn-primary" id="lastSurpriseBtn">One Last Surprise <span>♡</span></button>
+      <div class="last-reveal" id="lastReveal" hidden>
+        <div class="big-heart">♥</div>
+        <p id="lastMessage"></p>
+        <span class="forever">and always, yours. ♡</span>
+      </div>
+      <button class="text-btn restart-btn" id="restartBtn">Relive our little surprise ↺</button>
+    </section>
+
+    <footer class="site-footer">crafted with love <span>♥</span> and a little bit of magic</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
